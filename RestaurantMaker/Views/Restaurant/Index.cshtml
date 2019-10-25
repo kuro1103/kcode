@@ -4,29 +4,53 @@
 }
 
 <h2>Index</h2>
-<div ng-app="">
-    <p>名字 : <input type="text" ng-model="name"></p>
-    <h1>Hello {{name}}</h1>
-</div>
+<table id="tRestaurant" class="table">
+    <tr>
+        <td>餐廳名稱</td>
+        <td>電話</td>
+        <td>地址</td>
+    </tr>
+</table>
+<script language="javascript">
+    $.ajax(
+        {
+            url: "http://localhost:379/api/Restaurant/GetRestaurantList",
+            type: 'get',
+            cache: false,
+            async: false,
+            data: { RestaurantName: 1 },
+            dataType: 'json',
+            contentType: 'application/json',
+            success: function (data) {
+                if (data) {
+                    var strTr = "";
+                    $.each(data, function (i, item) {
+                        $.each(item, function (j, item2) {
+                            strTr += "<tr>";
+                            strTr += "<td>" + item2.restaurantName + "</td>";
+                            strTr += "<td>" + item2.restaurantPhone + "</td>";
+                            strTr += "<td>";
+                            strTr += item2.restaurantCity + item2.restaurantCounty + item2.restaurantRoad;
+                            if (item2.restaurantLane != "") {
+                                strTr += item2.restaurantLane + "巷";
+                            }
+                            if (item2.restaurantAlley != "") {
+                                strTr += item2.restaurantAlley + "弄";
+                            }
+                            if (item2.restaurantNumber != "") {
+                                strTr += item2.restaurantNumber + "號";
+                            }
+                            if (item2.restaurantFloor != "") {
+                                strTr += item2.restaurantFloor + "樓";
+                            }
 
-<script>
+                            strTr += "</td>";
+                            strTr += "</tr>";
+                        });
 
-    /*
-    var app = angular.module('myApp', []);
-
-    app.controller('siteCtrl', function ($scope, $http) {
-        $http({
-            method: 'GET',
-            url: 'http://localhost:379/api/Restaurant/GetRestaurantList?param.restaurantName=1',
-
-        }).then(function successCallback(response) {
-            alert(response.data.tostring());
-            $scope.names = response.data.RestaurantList;
-        }, function errorCallback(response) {
-
-            // 请求失败执行代码
+                    });
+                    $("#tRestaurant").append(strTr);
+                }
+            }
         });
-
-    });
-    */
 </script>
