@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<div ng-app="">
+    <p>名字 : <input type="text" ng-model="name"></p>
+    <h1>Hello {{name}}</h1>
+</div>
+
+<script>
+
+    /*
+    var app = angular.module('myApp', []);
+
+    app.controller('siteCtrl', function ($scope, $http) {
+        $http({
+            method: 'GET',
+            url: 'http://localhost:379/api/Restaurant/GetRestaurantList?param.restaurantName=1',
+
+        }).then(function successCallback(response) {
+            alert(response.data.tostring());
+            $scope.names = response.data.RestaurantList;
+        }, function errorCallback(response) {
+
+            // 请求失败执行代码
+        });
+
+    });
+    */
+</script>

@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RestaurantMaker</name>
+    </assembly>
+    <members>
+        <member name="M:RestaurantMaker.App_Start.AutofacConfig.Register">
+            <summary>
+            Registers this instance.
+            </summary>
+        </member>
+        <member name="M:RestaurantMaker.App_Start.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Registers the specified configuration.
+            </summary>
+            <param name="config">The configuration.</param>
+        </member>
+        <member name="P:RestaurantMaker.Models.Conditions.RestaurantListCondition.RestaurantName">
+            <summary>
+            餐廳名稱
+            </summary>
+        </member>
+        <member name="T:RestaurantMaker.Models.Data.RestaurantListDataModel">
+            <summary>
+            取得餐廳清單DataModel
+            </summary>
+        </member>
+        <member name="P:RestaurantMaker.Models.Data.RestaurantListDataModel.RestaurantAlley">
+            <summary>
+            餐廳弄
+            </summary>
+        </member>
+        <member name="P:RestaurantMaker.Models.Data.RestaurantListDataModel.RestaurantCity">
+            <summary>
+            餐廳縣市
+            </summary>
+        </member>
+        <member name="P:RestaurantMaker.Models.Data.RestaurantListDataModel.RestaurantCounty">
+            <summary>
+            餐廳鄉鎮區
+            </summary>
+        </member>
+        <member name="P:RestaurantMaker.Models.Data.RestaurantListDataModel.RestaurantFloor">
+            <summary>
+            餐廳樓層
+            </summary>
+        </member>
+        <member name="P:RestaurantMaker.Models.Data.RestaurantListDataModel.RestaurantID">
+            <summary>
+            餐廳ID
+            </summary>
+        </member>
+        <member name="P:RestaurantMaker.Models.Data.RestaurantListDataModel.RestaurantLane">
+            <summary>
+            餐廳巷
+            </summary>
+        </member>
+        <member name="P:RestaurantMaker.Models.Data.RestaurantListDataModel.RestaurantName">
+            <summary>
+            餐廳名稱
+            </summary>
+        </member>
+        <member name="P:RestaurantMaker.Models.Data.RestaurantListDataModel.RestaurantNumber">
+            <summary>
+            餐廳門牌號碼
+            </summary>
+        </member>
+        <member name="P:RestaurantMaker.Models.Data.RestaurantListDataModel.RestaurantPhone">
+            <summary>
+            餐廳電話
+            </summary>
+        </member>
+        <member name="P:RestaurantMaker.Models.Data.RestaurantListDataModel.RestaurantRoad">
+            <summary>
+            餐廳路名
+            </summary>
+        </member>
+        <member name="T:RestaurantMaker.Models.Info.RestaurantListInfoModel">
+            <summary>
+            餐廳InfoModel
+            </summary>
+        </member>
+        <member name="P:RestaurantMaker.Models.Info.RestaurantListInfoModel.RestaurantName">
+            <summary>
+            餐廳名稱
+            </summary>
+        </member>
+        <member name="T:RestaurantMaker.Models.Result.RestaurantListResultModel">
+            <summary>
+            取得餐廳清單ResultModel
+            </summary>
+        </member>
+        <member name="P:RestaurantMaker.Models.Result.RestaurantListResultModel.RestaurantAlley">
+            <summary>
+            餐廳弄
+            </summary>
+        </member>
+        <member name="P:RestaurantMaker.Models.Result.RestaurantListResultModel.RestaurantCity">
+            <summary>
+            餐廳縣市
+            </summary>
+        </member>
+        <member name="P:RestaurantMaker.Models.Result.RestaurantListResultModel.RestaurantCounty">
+            <summary>
+            餐廳鄉鎮區
+            </summary>
+        </member>
+        <member name="P:RestaurantMaker.Models.Result.RestaurantListResultModel.RestaurantFloor">
+            <summary>
+            餐廳樓層
+            </summary>
+        </member>
+        <member name="P:RestaurantMaker.Models.Result.RestaurantListResultModel.RestaurantID">
+            <summary>
+            餐廳ID
+            </summary>
+        </member>
+        <member name="P:RestaurantMaker.Models.Result.RestaurantListResultModel.RestaurantLane">
+            <summary>
+            餐廳巷
+            </summary>
+        </member>
+        <member name="P:RestaurantMaker.Models.Result.RestaurantListResultModel.RestaurantName">
+            <summary>
+            餐廳名稱
+            </summary>
+        </member>
+        <member name="P:RestaurantMaker.Models.Result.RestaurantListResultModel.RestaurantNumber">
+            <summary>
+            餐廳門牌號碼
+            </summary>
+        </member>
+        <member name="P:RestaurantMaker.Models.Result.RestaurantListResultModel.RestaurantPhone">
+            <summary>
+            餐廳電話
+            </summary>
+        </member>
+        <member name="P:RestaurantMaker.Models.Result.RestaurantListResultModel.RestaurantRoad">
+            <summary>
+            餐廳路名
+            </summary>
+        </member>
+        <member name="M:RestaurantMaker.Repositories.Interface.IRestaurantClient.GetRestaurantList(RestaurantMaker.Models.Conditions.RestaurantListCondition)">
+             <summary>
+            
+             </summary>
+             <param name="condition"></param>
+             <returns></returns>
+        </member>
+        <member name="T:RestaurantMaker.WebApis.Parameters.RestaurantListParameters">
+            <summary>
+            取得餐廳清單Parameters
+            </summary>
+        </member>
+        <member name="P:RestaurantMaker.WebApis.Parameters.RestaurantListParameters.RestaurantName">
+            <summary>
+            餐廳名稱
+            </summary>
+        </member>
+        <member name="T:RestaurantMaker.WebApis.RestaurantController">
+            <summary>
+            餐廳Controller
+            </summary>
+        </member>
+        <member name="M:RestaurantMaker.WebApis.RestaurantController.#ctor(RestaurantMaker.Service.Interface.IRestaurantService)">
+            <summary>
+            建構式
+            </summary>
+            <param name="restaurantService"></param>
+        </member>
+        <member name="M:RestaurantMaker.WebApis.RestaurantController.GetRestaurantList(RestaurantMaker.WebApis.Parameters.RestaurantListParameters)">
+            <summary>
+            取得餐廳清單
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:RestaurantMaker.WebApis.ViewModels.RestaurantListViewModel">
+            <summary>
+            餐廳ViewModel
+            </summary>
+        </member>
+    </members>
+</doc>
